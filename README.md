@@ -1,6 +1,6 @@
 # projet algo steam shop
  
-".\env\Scripts\activate" pour activer le venv
+".\project\env\Scripts\activate" pour activer le venv
 
 
 "python manage.py runserver" pour lancer le site web
