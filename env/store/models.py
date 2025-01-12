@@ -7,7 +7,6 @@ class Product(models.Model):
     price = models.FloatField(default=0.0)
     description = models.TextField(blank=True)
     thumbnail = models.ImageField(upload_to="products",blank=True,null=True)
-    isF2P = models.BooleanField()
 
     def __str__(self):
         return self.name
