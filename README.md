@@ -1,5 +1,7 @@
 # projet algo steam shop
- 
+
+requirement.txt >>> liste pip
+
 ".\project\env\Scripts\activate" pour activer le venv
 
 
