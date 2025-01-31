@@ -2,7 +2,7 @@
 
 .\env\requirement.txt >>> liste pip
 
-".\project\env\Scripts\activate" >>> active le venv
+".\env\Scripts\activate" >>> active le venv
 
 "python manage.py runserver" >>> lance le site web, a faire depuis ".\project\"
 
