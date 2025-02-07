@@ -19,8 +19,14 @@ from django.urls import path
 from store.views import index
 from django.conf.urls.static import static
 from steamShop import settings
+from accounts.views import signup
 
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
+<<<<<<< Updated upstream:env/steamShop/urls.py
+=======
+    path('signup/', signup, name='signup'),
+    path('product/<str:slug>', product_detail, name="product"),
+>>>>>>> Stashed changes:project/steamShop/urls.py
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
