@@ -15,7 +15,18 @@
     margin-top: 50px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 ">Steom purchase list</h1>
-    </a>
+    
+
+    {% if user.is_authenticated %}
+
+    </a>connecté en tant que : {{ user.username }}</a>
+    <a href="{% url 'logout' %}">(Déconexion)</a>
+
+    {% else %}
+        <a href="{% url 'signup' %}">S'inscrire</a>
+        <a href="{% url 'login' %}">Se connecter</a>
+    {% endif %}
+
     {% block content %}
 
     {% endblock %}
