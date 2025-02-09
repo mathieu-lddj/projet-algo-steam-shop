@@ -1,0 +1,147 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    background-color: #242833;
+    font-size: 30px;
+    padding: 5px;
+    font-family: "Roboto Light", "sans-serif";
+    color: lightgrey;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.steampic {
+    z-index: 5;
+    position: fixed;
+    align-content: center;
+    padding: 5px;
+    image-rendering: auto;
+    position: fixed;
+}
+
+
+
+
+
+/* Display principal */
+.gamesdisplay {
+    display: flex;
+    gap: 20px;
+    background-color: #3b404f;
+    width: 1200px;
+    max-width: 80%;
+    margin: 15px auto;
+    padding: 5px;
+    align-items: center;
+    border-radius: 15px;
+}
+/* titre du jeu */
+.gname {
+    font-family: "Roboto Light", "sans-serif";
+    font-weight: bold;
+    font-size: 25px;
+    color: lightgrey;
+    text-align: left;
+}
+
+/* prix */
+.gprice {
+    font-family: "Roboto Thin", "sans-serif";
+    font-weight: bolder;
+    font-size: 17px;
+    background-color: forestgreen;
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: 1px solid limegreen;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+}
+/* interaction */
+.gamesdisplay button:active {
+    border: 1px solid darkgray;
+}
+/* Interraction passage du curseur sur le boouton */
+.gamesdisplay button:hover {
+    background-color: #146035;
+}
+/* description du jeu */
+.gdesc {
+    font-family: "Roboto Light", "sans-serif";
+    font-size: 15px;
+    font-weight: lighter;
+    color: lightgrey;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+/* barre d'action sous le titre */
+.actionbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1e26;
+    padding: 10px 0;
+    position: fixed;
+    top: 170px;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.actionbtn {
+    font-size: 25px;
+    cursor: pointer;
+    font-family: "Roboto Light", sans-serif;
+    color: #c7d5e0;
+    margin: 0 20px;
+    border: none;
+    background: none;
+}
+.actionbtn:hover {
+    color: cornflowerblue;
+    text-decoration: underline;
+
+
+
+
+}
+body {
+    background-color: #171a21;
+}
+
+
+#topbutton {
+    position: fixed;
+    color: lightgrey;
+    background-color: #2f3b40;
+    bottom: 10px;
+    right: 5px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+
+/* barre invisible pour éviter un overlap des jeux sous le titre*/
+#invpush {
+    top: 0;
+    margin-bottom: 250px;
+}
+
+
+
+
+

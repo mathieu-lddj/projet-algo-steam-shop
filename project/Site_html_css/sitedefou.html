@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="sitecss.css">
+<head>
+    <meta charset="UTF-8">
+    <title>real steam market</title>
+</head>
+<body>
+
+<!-- logo magnifique fait maison -->
+<div class="header"></div>
+    <div class="steampic"> <img src=https://i.postimg.cc/BvdtHq0Q/Drawing.png alt="tout pareil" width="400"></div>
+
+
+
+<!-- titre steam, en-tête -->
+    <div class="title">
+        <h1>Steam Market (de wish)</h1>
+    </div>
+
+<!-- Barre d'action sous le titre -->
+<div class="actionbar">
+    <button class="actionbtn" onclick="window.open('https://store.steampowered.com/')">Home</button>
+    <button class="actionbtn" onclick="window.open('http://localhost:63342/projet-algo-steam-shop/project/templates/sitedefou.html?_ijt=tf14nin05ie02q9ppo7p5b9j9i')">Store</button>
+    <button class="actionbtn" onclick="window.open('https://github.com/mathieu-lddj/projet-algo-steam-shop')">Projet Github</button>
+    <button class="actionbtn" onclick="window.open('https://steamcommunity.com/')">Community</button>
+</div>
+
+<!-- pour pousser veres le bas les jeux vu que le title est fixed -->
+<div id="invpush"></div>
+
+
+
+<!-- bouton scroll pour retourner au top de la page -->
+
+        <button id="topbutton">Return to top</button>
+        <script>
+           const topb = document.getElementById('topbutton');
+            topbutton.onclick = function () {
+                window.scrollTo({
+                    top: 0, behavior: "smooth"
+                })
+            }
+        </script>
+
+
+
+<!-- template de display des jeux -->
+    <template id="displaytp">
+     <div class="gamesdisplay">
+        <img class="gimg" src="" alt="no picture :( " height="160px">
+        <p class="gname">name</p>
+        <p class="gdesc">desc</p>
+        <button class="gprice">price</button>
+     </div>
+    </template>
+
+
+
+<!-- JS pour cloner la template de display -->
+<div id="clones"></div>
+<script>  <!-- Pour être sûr que ce soit exec après avoir chargé la page faut le mettre en bas -->
+
+        const doc = document.getElementById("clones");
+        const template = document.getElementById("displaytp");
+
+        let games = [
+            {name: "valorant strike", price: "999€", desc: "counter strike but idk it's valorant"
+                ,imgurl: "https://im.qccdn.fr/node/guide-d-achat-jambon-blanc-3979/thumbnail_1000x600px-119710.jpg"},
+            {name: "geometrynite", price: "-2€", desc:"geometry dash battle royale (omg)",
+                imgurl: "https://im.qccdn.fr/node/guide-d-achat-jambon-blanc-3979/thumbnail_1000x600px-119710.jpg"},
+            {name: "jeanbon", price: "yes", desc:"jean bon le grand.",
+                imgurl: "https://im.qccdn.fr/node/guide-d-achat-jambon-blanc-3979/thumbnail_1000x600px-119710.jpg"},
+            {name: "idk", price: "2", desc:"dzaidhzaiudzah dhu z ad z ad z ad za di azijo dojjo fe zijofijo dza.",
+                imgurl: "https://im.qccdn.fr/node/guide-d-achat-jambon-blanc-3979/thumbnail_1000x600px-119710.jpg"}
+        ]
+
+        //remplacement des valeurs, on parcours la liste games
+        for (let i=0; i < games.length; i++) {
+            const content = template.content.cloneNode(true); //clone le contenu, et le child node (avec le true)
+            content.querySelector(".gname").textContent = games[i].name; //remplace le nom, puis le prix etc...
+            content.querySelector(".gprice").textContent = games[i].price;
+            content.querySelector(".gimg").src = games[i].imgurl;
+            content.querySelector(".gdesc").textContent = games[i].desc;
+            doc.appendChild(content);
+        }
+
+</script>
+
+
+</body>
+</html>
