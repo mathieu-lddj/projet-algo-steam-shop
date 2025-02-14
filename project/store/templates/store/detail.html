@@ -10,6 +10,9 @@
     </div>
     <img class="product-thumbnail" src="{{ product.thumbnail.url }}" alt="{{ product.name }}">
     <p class="product-description">{{ product.description }}</p>
+    {% if user.is_authenticated %}
+    <p><a href="{% url 'add_to_cart' product.slug %}">Ajouter l'article au panier</a></p>
+    {% endif %}
     <a href="{% url 'index' %}" class="back-link">Retour à la boutique</a>
 </div>
 
