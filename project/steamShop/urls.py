@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from store.views import index, product_detail, add_to_cart
+from store.views import index, product_detail, add_to_cart, cart
 from django.conf.urls.static import static
 from steamShop import settings
 from accounts.views import signup,login_user, logout_user
@@ -24,6 +24,7 @@ from accounts.views import signup,login_user, logout_user
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
+    path('cart/', cart, name="cart"),
     path('signup/', signup, name='signup'),
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
