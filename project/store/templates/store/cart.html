@@ -19,9 +19,9 @@
         <img class="gimg" src="{{ order.product.thumbnail.url }}" alt="{{ order.product.name }}">
         <div style="flex-grow: 1;">
             <p class="gname">{{ order.product.name }}</p>
-            <p class="gdesc">Quantité: {{ order.quantity }}</p>
+            <p class="gdesc">Quantité: {{ order.quanntity }}</p>
         </div>
-        <div class="gprice">{{ order.total_price }}€</div>
+        <div class="gprice">Prix : {{ order.product.price }}€</div>
     </div>
     {% endfor %}
 </div>
