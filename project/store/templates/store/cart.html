@@ -1,12 +1,32 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
+<style>
+    .cart-item {
+        margin: 20px auto;
+    }
+    .total-price {
+        font-size: 24px;
+        text-align: center;
+        color: lightgrey;
+        margin: 30px 0;
+    }
+</style>
 
-{% for order in orders %}
+<div id="clones">
+    {% for order in orders %}
+    <div class="gamesdisplay cart-item">
+        <img class="gimg" src="{{ order.product.thumbnail.url }}" alt="{{ order.product.name }}">
+        <div style="flex-grow: 1;">
+            <p class="gname">{{ order.product.name }}</p>
+            <p class="gdesc">Quantité: {{ order.quantity }}</p>
+        </div>
+        <div class="gprice">{{ order.total_price }}€</div>
+    </div>
+    {% endfor %}
+</div>
 
-<h2>{{ order.product.name }}</h2>
-<img src="{{ order.product.thumbnail.url }}" alt="{{ order.product.name }}">
-
-{% endfor %}
-
+<div class="total-price">
+    Total du panier: {{ total }}€
+</div>
 {% endblock %}
